@@ -14,9 +14,9 @@ return new class extends Migration
     Schema::create('characters_table', function (Blueprint $table) {
       $table->id();
       $table->string('name');
-      $table->foreignId('rating_id');
-      $table->foreignId('element_id');
-      $table->foreignId('constellation_id');
+      $table->foreignId('rating_id')->constrained('ratings_table');
+      $table->foreignId('element_id')->constrained('elements_table');
+      $table->foreignId('constellation_id')->constrained('constellations_table');
       $table->string('img_path');
       $table->timestamps();
     });

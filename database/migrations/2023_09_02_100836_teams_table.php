@@ -13,9 +13,9 @@ return new class extends Migration
   {
     Schema::create('teams_table', function (Blueprint $table) {
       $table->id();
-      $table->foreignId('dps');
-      $table->foreignId('sub_dps');
-      $table->foreignId('support');
+      $table->foreignId('dps')->nullable()->constrained('characters_table');
+      $table->foreignId('sub_dps')->nullable()->constrained('characters_table');
+      $table->foreignId('support')->nullable()->constrained('characters_table');
       $table->timestamps();
     });
   }
