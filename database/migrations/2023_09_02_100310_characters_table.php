@@ -18,6 +18,7 @@ return new class extends Migration
       $table->foreignId('element_id');
       $table->foreignId('constellation_id');
       $table->string('img_path');
+      $table->timestamps();
     });
   }
 

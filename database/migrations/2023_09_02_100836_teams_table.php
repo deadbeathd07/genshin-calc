@@ -16,6 +16,7 @@ return new class extends Migration
       $table->foreignId('dps');
       $table->foreignId('sub_dps');
       $table->foreignId('support');
+      $table->timestamps();
     });
   }
 
