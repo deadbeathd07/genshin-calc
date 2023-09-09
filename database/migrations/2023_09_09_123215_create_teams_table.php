@@ -13,10 +13,10 @@ return new class extends Migration
   {
     Schema::create('teams', function (Blueprint $table) {
       $table->id();
-      $table->foreignId('first_member')->constrained('characters_table');
-      $table->foreignId('second_member')->constrained('characters_table');
-      $table->foreignId('third_member')->constrained('characters_table');
-      $table->foreignId('fourth_member')->constrained('characters_table');
+      $table->foreignId('first_member')->constrained('characters');
+      $table->foreignId('second_member')->constrained('characters');
+      $table->foreignId('third_member')->constrained('characters');
+      $table->foreignId('fourth_member')->constrained('characters');
       $table->timestamps();
     });
   }
