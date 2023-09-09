@@ -9,6 +9,6 @@ class Element extends Model
 {
   protected $fillable = [
     'name',
-    'img_pth'
+    'img_path'
   ];
 }
