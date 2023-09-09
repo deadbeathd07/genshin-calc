@@ -12,6 +12,7 @@ class Character extends Model
     'rating_id',
     'element_id',
     'constellation_id',
+    'position_id',
     'img_path'
   ];
 }

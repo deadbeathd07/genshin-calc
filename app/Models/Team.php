@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Team extends Model
 {
   protected $fillable = [
-    'dps',
-    'sub_dps',
-    'support'
+    'first_member',
+    'second_member',
+    'third_member',
+    'fourth_member'
   ];
 }
