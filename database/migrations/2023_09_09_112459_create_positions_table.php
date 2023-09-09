@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Position;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,6 +17,29 @@ return new class extends Migration
       $table->string('name', 100);
       $table->timestamps();
     });
+
+    $data = array(
+      [
+        'name' => 'DPS'
+      ],
+      [
+        'name' => 'Sub-DPS'
+      ],
+      [
+        'name' => 'Support'
+      ]
+    );
+
+    $this->positionCreate($data);
+  }
+
+  private function positionCreate($data)
+  {
+    foreach ($data as $datum) {
+      $position = new Position();
+      $position->name = $datum['name'];
+      $position->save();
+    }
   }
 
   /**
