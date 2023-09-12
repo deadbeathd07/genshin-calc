@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Character extends Model
+class CharacterInfo extends Model
 {
   protected $fillable = [
-    'name',
+    'character_id',
+    'rating_id',
     'element_id',
-    'img_path'
+    'constellation_id',
+    'position_id',
   ];
 }
