@@ -627,6 +627,9 @@ return new class extends Migration
       $character = new Character();
       $character->name = $datum['name'];
       $character->element_id = $datum['element_id'];
+      $character->dps = $datum['dps'];
+      $character->sub_dps = $datum['sub_dps'];
+      $character->support = $datum['support'];
       $character->img_path = $datum['img_path'];
       $character->save();
     }
