@@ -1,15 +1,15 @@
 <template>
   <div class="tw-h-min-full tw-flex tw-flex-col">
-    <DefaultHeader />
-    <DefaultMain />
-    <DefaultFooter />
+    <AppHeader />
+    <AppMain />
+    <AppFooter />
   </div>
 </template>
 
 <script setup>
-import DefaultHeader from "../main/DefaultHeader.vue";
-import DefaultFooter from "../main/DefaultFooter.vue";
-import DefaultMain from "../main/DefaultMain.vue";
+import AppHeader from "../main/AppHeader.vue";
+import AppFooter from "../main/AppFooter.vue";
+import AppMain from "../main/AppMain.vue";
 </script>
 
 <style></style>
