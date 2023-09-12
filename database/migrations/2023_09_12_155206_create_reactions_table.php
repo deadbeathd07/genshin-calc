@@ -11,20 +11,20 @@ return new class extends Migration
    */
   public function up(): void
   {
-    Schema::create('teams', function (Blueprint $table) {
+    Schema::create('reactions', function (Blueprint $table) {
       $table->id();
-      $table->foreignId('first_member')->constrained('characters');
-      $table->foreignId('second_member')->constrained('characters');
-      $table->foreignId('third_member')->constrained('characters');
-      $table->foreignId('fourth_member')->constrained('characters');
+      $table->string('name');
+      $table->foreignId('first_element_id')->constrained('elements');
+      $table->foreignId('second_element_id')->constrained('elements');
       $table->timestamps();
     });
   }
+
   /**
    * Reverse the migrations.
    */
   public function down(): void
   {
-    Schema::dropIfExists('teams');
+    Schema::dropIfExists('reactions');
   }
 };
