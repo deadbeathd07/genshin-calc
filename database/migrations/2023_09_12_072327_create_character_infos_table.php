@@ -205,6 +205,8 @@ return new class extends Migration
         'position_id' => 1,
       ],
     );
+
+    $this->characterInfoCreate($data);
   }
 
   private function characterInfoCreate($data)
