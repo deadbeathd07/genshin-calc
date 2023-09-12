@@ -16,6 +16,9 @@ return new class extends Migration
       $table->id();
       $table->string('name');
       $table->foreignId('element_id')->constrained('elements');
+      $table->boolean('dps')->nullable();
+      $table->boolean('sub_dps')->nullable();
+      $table->boolean('support')->nullable();
       $table->string('img_path');
       $table->timestamps();
     });
@@ -24,76 +27,121 @@ return new class extends Migration
       [
         'name' => 'Al-Khaytam',
         'element_id' => 4,
+        'dps' => true,
+        'sub_dps' => false,
+        'support' => false,
         'img_path' => '/public/images/heroes/al_khaytam.webp'
       ],
       [
         'name' => 'Albedo',
         'element_id' => 2,
+        'dps' => false,
+        'sub_dps' => true,
+        'support' => true,
         'img_path' => '/public/images/heroes/albedo.webp'
       ],
       [
         'name' => 'Aloy',
         'element_id' => 6,
+        'dps' => true,
+        'sub_dps' => false,
+        'support' => false,
         'img_path' => '/public/images/heroes/aloy.webp'
       ],
       [
         'name' => 'Amber',
         'element_id' => 7,
+        'dps' => false,
+        'sub_dps' => true,
+        'support' => false,
         'img_path' => '/public/images/heroes/amber.webp'
       ],
       [
         'name' => 'Ayaka',
         'element_id' => 6,
+        'dps' => true,
+        'sub_dps' => false,
+        'support' => false,
         'img_path' => '/public/images/heroes/ayaka.webp'
       ],
       [
         'name' => 'Ayato',
         'element_id' => 5,
+        'dps' => true,
+        'sub_dps' => true,
+        'support' => true,
         'img_path' => '/public/images/heroes/ayato.png'
       ],
       [
         'name' => 'Bai Dou',
+        'dps' => true,
+        'sub_dps' => true,
+        'support' => false,
         'element_id' => 3,
         'img_path' => '/public/images/heroes/baidou.webp'
       ],
       [
         'name' => 'Barbara',
         'element_id' => 5,
+        'dps' => true,
+        'sub_dps' => false,
+        'support' => true,
         'img_path' => '/public/images/heroes/barbara.webp'
       ],
       [
         'name' => 'Bay Chzhu',
         'element_id' => 4,
+        'dps' => false,
+        'sub_dps' => false,
+        'support' => true,
         'img_path' => '/public/images/heroes/bay_chzhu.webp'
       ],
       [
         'name' => 'Bennet',
         'element_id' => 7,
+        'dps' => false,
+        'sub_dps' => false,
+        'support' => true,
         'img_path' => '/public/images/heroes/bennett.webp'
       ],
       [
         'name' => 'Candace',
+        'dps' => false,
+        'sub_dps' => false,
+        'support' => true,
         'element_id' => 5,
         'img_path' => '/public/images/heroes/candace.webp'
       ],
       [
         'name' => 'Chong Yun',
         'element_id' => 6,
+        'dps' => true,
+        'sub_dps' => true,
+        'support' => true,
         'img_path' => '/public/images/heroes/chongyun.webp'
       ],
       [
         'name' => 'Collei',
         'element_id' => 4,
+        'dps' => false,
+        'sub_dps' => true,
+        'support' => false,
         'img_path' => '/public/images/heroes/collei.webp'
       ],
       [
         'name' => 'Cyno',
         'element_id' => 3,
+        'dps' => true,
+        'sub_dps' => false,
+        'support' => false,
         'img_path' => '/public/images/heroes/cyno.webp'
       ],
       [
         'name' => 'Dehya',
         'element_id' => 7,
+        'dps' => false,
+        'sub_dps' => false,
+        'support' => false,
         'img_path' => '/public/images/heroes/dehya.webp'
       ],
       [

@@ -10,6 +10,9 @@ class Character extends Model
   protected $fillable = [
     'name',
     'element_id',
-    'img_path'
+    'img_path',
+    'dps',
+    'sub_dps',
+    'support'
   ];
 }
