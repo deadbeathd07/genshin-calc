@@ -1,15 +1,24 @@
 <template>
   <footer
-    class="footer items-center p-4 bg-neutral text-neutral-content flex-grow-0"
+    class="tw-footer tw-items-center tw-p-4 tw-bg-neutral tw-text-neutral-content tw-flex-grow-0"
   >
-    <p class="items-center grid-flow-col">
+    <p class="tw-items-center tw-grid-flow-col">
       Copyright © 2023 - All right reserved
     </p>
-    <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-      <a><font-awesome-icon icon="fa-brands fa-twitter" class="w-6 h-6" /></a>
-      <a><font-awesome-icon icon="fa-brands fa-youtube" class="w-6 h-6" /></a>
+    <div
+      class="tw-grid-flow-col tw-gap-4 tw-md:tw-place-self-center tw-md:tw-justify-self-end"
+    >
+      <a
+        ><font-awesome-icon icon="fa-brands fa-twitter" class="tw-w-6 tw-h-6"
+      /></a>
+      <a
+        ><font-awesome-icon icon="fa-brands fa-youtube" class="tw-w-6 tw-h-6"
+      /></a>
       <a>
-        <font-awesome-icon icon="fa-brands fa-facebook-f" class="w-6 h-6" />
+        <font-awesome-icon
+          icon="fa-brands fa-facebook-f"
+          class="tw-w-6 tw-h-6"
+        />
       </a>
     </div>
   </footer>

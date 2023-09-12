@@ -1,6 +1,6 @@
 <template>
-  <main class="flex-grow-1">
-    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+  <main class="tw-flex-grow-1">
+    <div class="tw-mx-auto tw-max-w-7xl tw-py-6 tw-sm:tw-px-6 tw-lg:tw-px-8">
       <router-view />
     </div>
   </main>
