@@ -1,7 +1,9 @@
 import { createApp } from "vue";
 import router from "./router";
 import store from "./store";
+import vuetify from "./vuetify";
 import "./style.css";
+import "vuetify/styles";
 import App from "./App.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -18,4 +20,5 @@ createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)
   .use(store)
   .use(router)
+  .use(vuetify)
   .mount("#app");
