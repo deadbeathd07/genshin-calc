@@ -3,7 +3,7 @@ import AuthorizationView from "../views/auth/AuthorizationView.vue";
 import RegistrationView from "../views/auth/RegistrationView.vue";
 import DefaultLayout from "../components/layouts/DefaultLayout.vue";
 import HomeView from "../views/HomeView.vue";
-import PlugView from "../views/PlugView.vue";
+import Error404 from "../views/Error404.vue";
 
 const routes = [
   {
@@ -29,9 +29,9 @@ const routes = [
     component: RegistrationView,
   },
   {
-    path: "/plug",
-    name: "PlugView",
-    component: PlugView,
+    path: "/404",
+    name: "404",
+    component: Error404,
   },
 ];
 
