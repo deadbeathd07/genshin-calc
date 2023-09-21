@@ -12,8 +12,4 @@
 </template>
 <script></script>
 
-<style>
-.gc {
-  text-transform: uppercase;
-}
-</style>
+<style></style>
