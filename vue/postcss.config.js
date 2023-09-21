@@ -4,7 +4,7 @@ export default {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
-    postcssImport: {},
+    "postcss-import": {},
     ...(process.env.NODE_ENV === "production" ? [purgeCSSPlugin] : []),
   },
 };
