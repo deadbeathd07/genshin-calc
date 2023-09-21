@@ -1,6 +1,10 @@
 <template>
   <v-main>
-    <router-view />
+    <v-sheet color="grey-darken-2">
+      <v-sheet max-width="1440" color="transparent" class="mx-auto">
+        <router-view />
+      </v-sheet>
+    </v-sheet>
   </v-main>
 </template>
 
