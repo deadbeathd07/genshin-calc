@@ -17,7 +17,7 @@
           <v-btn
             size="large"
             v-bind="props"
-            icon="mdi-account-circle"
+            icon="mdi-account-circle-outline"
             @click="toPage('Entry')"
           />
         </template>
