@@ -1,43 +1,26 @@
-import { createRouter, createWebHistory } from "vue-router";
-import AuthorizationView from "../views/auth/AuthorizationView.vue";
-import RegistrationView from "../views/auth/RegistrationView.vue";
-import DefaultLayout from "../components/layouts/DefaultLayout.vue";
-import HomeView from "../views/HomeView.vue";
-import Error404 from "../views/Error404.vue";
+// Composables
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: "/",
-    redirect: "/home",
-    component: DefaultLayout,
+    path: '/',
+    component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
-        path: "/home",
-        name: "HomeView",
-        component: HomeView,
+        path: '',
+        name: 'Home',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
       },
     ],
   },
-  {
-    path: "/auth",
-    name: "AuthorizationView",
-    component: AuthorizationView,
-  },
-  {
-    path: "/register",
-    name: "RegistrationView",
-    component: RegistrationView,
-  },
-  {
-    path: "/404",
-    name: "404",
-    component: Error404,
-  },
-];
+]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.APP_URL),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
-});
+})
 
-export default router;
+export default router

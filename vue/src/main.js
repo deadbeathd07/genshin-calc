@@ -1,24 +1,20 @@
-import { createApp } from "vue";
-import router from "./router";
-import store from "./store";
-import vuetify from "./vuetify";
-import "./style.css";
-import "vuetify/styles";
-import App from "./App.vue";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import {
-  faTwitter,
-  faYoutube,
-  faFacebookF,
-} from "@fortawesome/free-brands-svg-icons";
-import "v-calendar/style.css";
+/**
+ * main.js
+ *
+ * Bootstraps Vuetify and other plugins then mounts the App`
+ */
 
-library.add({ faTwitter, faYoutube, faFacebookF });
+// Components
+import App from './App.vue'
 
-createApp(App)
-  .component("font-awesome-icon", FontAwesomeIcon)
-  .use(store)
-  .use(router)
-  .use(vuetify)
-  .mount("#app");
+// Composables
+import { createApp } from 'vue'
+
+// Plugins
+import { registerPlugins } from '@/plugins'
+
+const app = createApp(App)
+
+registerPlugins(app)
+
+app.mount('#app')
