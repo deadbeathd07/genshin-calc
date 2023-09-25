@@ -25,7 +25,9 @@ const store = createStore({
       commit("GET_CHARACTERS", newCharacters);
     },
     setFormRegistration({ commit }, newFormRegistration) {
-      commit("SET_FORM_REGISTRATION", JSON.parse(newFormRegistration));
+      let formRegistration = JSON.parse(newFormRegistration);
+      commit("SET_FORM_REGISTRATION", formRegistration);
+      axios.post("http://127.0.0.1:8000/api/registration", formRegistration);
     },
   },
 });
