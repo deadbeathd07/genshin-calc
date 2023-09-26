@@ -1,12 +1,11 @@
 <template>
   <v-app-bar>
     <template v-slot:prepend>
-      <v-btn
-        size="x-large"
-        type="text"
-        text="Calculator"
-        @click="toPage('Home')"
-      />
+      <v-btn size="x-large" type="text" @click="toPage('Home')">
+        <template v-slot:default>
+          <v-img :width="48" :height="48" src="logo.png"></v-img>
+        </template>
+      </v-btn>
     </template>
     <template v-slot:append>
       <v-btn size="large" type="text" @click="toPage('Register')">
