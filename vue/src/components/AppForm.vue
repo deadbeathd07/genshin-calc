@@ -20,15 +20,15 @@
         />
       </div>
     </div>
-    <v-text-field v-model="props.form.name" label="Name" class="w-100" />
+    <v-text-field v-model="form.name" label="Name" class="w-100" />
     <v-text-field
-      v-model="props.form.email"
+      v-model="form.email"
       label="E-mail"
       class="w-100"
       type="email"
     />
     <v-text-field
-      v-model="props.form.password"
+      v-model="form.password"
       label="Password"
       class="w-100"
       type="password"
@@ -38,11 +38,15 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+
 const props = defineProps({
   isEntry: Boolean,
-  form: Object,
+  initialForm: Object,
 });
 const emits = defineEmits(["onSubmit"]);
+
+const form = ref(props.initialForm);
 </script>
 
 <style></style>
