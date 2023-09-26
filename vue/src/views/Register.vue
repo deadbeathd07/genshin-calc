@@ -9,7 +9,7 @@
             :to="{ name: 'Entry' }"
             text="Log In"
             variant="text"
-            color="yellow"
+            color="cyan-darken-2"
           />
         </div>
       </div>
@@ -30,7 +30,7 @@
         class="w-100"
         type="password"
       />
-      <v-btn type="submit" text="Submit" class="w-100" />
+      <v-btn type="submit" text="Submit" class="w-100" color="cyan-darken-1" />
     </v-form>
   </v-sheet>
 </template>

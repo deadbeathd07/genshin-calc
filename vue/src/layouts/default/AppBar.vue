@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar>
+  <v-app-bar color="blue-grey-darken-2">
     <template v-slot:prepend>
       <v-btn size="x-large" type="text" @click="toPage('Home')">
         <template v-slot:default>

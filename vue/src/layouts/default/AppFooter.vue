@@ -1,5 +1,5 @@
 <template>
-  <v-footer>
+  <v-footer color="blue-grey-lighten-4">
     <a
       target="_blank"
       href="https://icons8.com/icon/UMjPnpMna57l/genshin-impact"

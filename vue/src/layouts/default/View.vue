@@ -1,6 +1,6 @@
 <template>
   <v-main>
-    <v-sheet color="grey-darken-2">
+    <v-sheet color="blue-grey-lighten-5" class="h-100">
       <v-sheet max-width="1440" color="transparent" class="mx-auto">
         <router-view />
       </v-sheet>
