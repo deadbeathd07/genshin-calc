@@ -1,12 +1,12 @@
 <template>
   <v-form @submit.prevent="emits['onSubmit']">
     <div class="mb-5">
-      <h2 class="text-center mb-2">Sign Up</h2>
+      <h2 class="text-center mb-2">{{ props.title.title }}</h2>
       <div class="d-flex align-center">
-        <p class="mr-2">Already have an account?</p>
+        <p class="mr-2">{{ props.title.question }}</p>
         <v-btn
-          :to="{ name: 'Entry' }"
-          text="Log In"
+          :to="props.title.link"
+          :text="props.title.btn_text"
           variant="text"
           color="cyan-darken-2"
         />
@@ -31,6 +31,7 @@
 
 <script setup>
 const props = defineProps({
+  title: Object,
   form: Object,
 });
 const emits = defineEmits(["onSubmit"]);
