@@ -1,12 +1,20 @@
 <template>
   <v-form @submit.prevent="emits['onSubmit']">
     <div class="mb-5">
-      <h2 class="text-center mb-2">{{ props.title.title }}</h2>
+      <h2 class="text-center mb-2">
+        {{ props.isEntry ? "Sign In" : "Sign Up" }}
+      </h2>
       <div class="d-flex align-center">
-        <p class="mr-2">{{ props.title.question }}</p>
+        <p class="mr-2">
+          {{
+            props.isEntry
+              ? "Don't have an account yet?"
+              : "Already have an account?"
+          }}
+        </p>
         <v-btn
-          :to="props.title.link"
-          :text="props.title.btn_text"
+          :to="{ name: props.isEntry ? 'Register' : 'Entry' }"
+          :text="props.isEntry ? 'Sign Up' : 'Sign In'"
           variant="text"
           color="cyan-darken-2"
         />
@@ -31,7 +39,7 @@
 
 <script setup>
 const props = defineProps({
-  title: Object,
+  isEntry: Boolean,
   form: Object,
 });
 const emits = defineEmits(["onSubmit"]);
