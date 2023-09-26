@@ -20,7 +20,12 @@
         />
       </div>
     </div>
-    <v-text-field v-model="form.name" label="Name" class="w-100" />
+    <v-text-field
+      v-if="!isEntry"
+      v-model="form.name"
+      label="Name"
+      class="w-100"
+    />
     <v-text-field
       v-model="form.email"
       label="E-mail"
